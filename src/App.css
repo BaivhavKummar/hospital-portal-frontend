@@ -1,7 +1,13 @@
+/* Overall App styling with hospital background */
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  background: url("./see.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
 }
 
+/* App logo and animation */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,9 +19,19 @@
   }
 }
 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* App header and link styling */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: rgba(40, 44, 52, 0.7);;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,11 +44,49 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Original container styles for login and dashboard */
+.login-container, .dashboard-container {
+  margin: 2rem auto;
+  max-width: 400px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Modified styling for the login container: larger and fixed at the bottom */
+.login-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px; /* Increased width */
+  padding: 2rem;    /* Larger padding for a bigger feel */
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for contrast */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+/* Input and button styling */
+input {
+  width: 90%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
