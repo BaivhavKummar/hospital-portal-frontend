@@ -6,16 +6,19 @@ function HospitalLogin({ onLoginSuccess }) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
 
+  // Use the environment variable for the API base URL
+  const API_BASE_URL = process.env.REACT_APP_API_URL;
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:6000/api/hospital/login', {
+    fetch(`${API_BASE_URL}/api/hospital/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password })
     })
       .then(response => response.json())
       .then(data => {
-        if(data.success) {
+        if (data.success) {
           onLoginSuccess(data); // Pass token and hospitalId to parent
         } else {
           setError('Invalid login credentials');
