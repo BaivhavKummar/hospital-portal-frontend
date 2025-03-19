@@ -5,20 +5,21 @@ function HospitalDashboard({ token }) {
   const [data, setData] = useState(null);
   const [message, setMessage] = useState('');
 
+  // Use environment variable for the API base URL
+  const API_BASE_URL = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
-    // Fetch hospital data after login
-    fetch('http://localhost:3000/api/hospital/data')
+    // Fetch hospital data after login using the dynamic API URL
+    fetch(`${API_BASE_URL}/api/hospital/data`)
       .then(res => res.json())
       .then(setData)
       .catch(console.error);
-  }, []);
+  }, [API_BASE_URL]);
 
   const handleBooking = (field, decrementBy = 1) => {
-    // For example, booking a bed decreases the availableBeds count.
-    // This function will update the data locally and via the API.
     const newValue = data[field] - decrementBy;
-    // Update via API call:
-    fetch('http://localhost:3000/api/hospital/data', {
+    // Update via API call using the environment variable URL
+    fetch(`${API_BASE_URL}/api/hospital/data`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ [field]: newValue })
