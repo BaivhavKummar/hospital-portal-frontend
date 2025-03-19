@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/hospital-portal-frontend/static/css/main.5ce853f5.css",
+    "main.js": "/hospital-portal-frontend/static/js/main.7677918a.js",
+    "static/js/453.9400ea60.chunk.js": "/hospital-portal-frontend/static/js/453.9400ea60.chunk.js",
+    "static/media/see.jpg": "/hospital-portal-frontend/static/media/see.7d364ebdb176dfe30829.jpg",
+    "index.html": "/hospital-portal-frontend/index.html",
+    "main.5ce853f5.css.map": "/hospital-portal-frontend/static/css/main.5ce853f5.css.map",
+    "main.7677918a.js.map": "/hospital-portal-frontend/static/js/main.7677918a.js.map",
+    "453.9400ea60.chunk.js.map": "/hospital-portal-frontend/static/js/453.9400ea60.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ce853f5.css",
+    "static/js/main.7677918a.js"
+  ]
+}
