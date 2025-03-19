@@ -8,7 +8,7 @@ function HospitalLogin({ onLoginSuccess }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:5000/api/hospital/login', {
+    fetch('http://localhost:6000/api/hospital/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password })
